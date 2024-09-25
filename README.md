@@ -43,7 +43,7 @@ asdf install frankenphp latest
 asdf global frankenphp latest
 
 # Now frankenphp commands are available
-frankenphp php-cli -v
+frankenphp -v
 ```
 
 Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to

@@ -61,7 +61,7 @@ install_version() {
 
 	(
 		mkdir -p "$install_path"
-		cp -r "$ASDF_DOWNLOAD_PATH"/* "$install_path"
+		cp -r "$ASDF_DOWNLOAD_PATH/$TOOL_NAME" "$install_path"
 
 		# TODO: Assert frankenphp executable exists.
 		local tool_cmd
