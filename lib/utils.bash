@@ -33,12 +33,19 @@ list_all_versions() {
 }
 
 download_release() {
-	local version filename url
+	local version filename url system arch
 	version="$1"
 	filename="$2"
 
 	# TODO: Adapt the release URL convention for frankenphp
-	url="$GH_REPO/archive/v${version}.tar.gz"
+	if [[ $OSTYPE == 'darwin'* ]]; then
+		system="mac"
+		arch="$(uname -m)"
+	else
+		system="linux"
+		arch="$(uname -i)"
+	fi
+	url="$GH_REPO/releases/download/v${version}/frankenphp-${system}-${arch}"
 
 	echo "* Downloading $TOOL_NAME release $version..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
