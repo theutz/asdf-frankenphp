@@ -48,7 +48,7 @@ download_release() {
 
 	echo "* Downloading $TOOL_NAME release $version..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
-	chmod +x "$install_path/$TOOL_NAME"
+	chmod +x "$filename"
 }
 
 install_version() {
