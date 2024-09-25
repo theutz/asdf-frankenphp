@@ -2,8 +2,7 @@
 
 set -euo pipefail
 
-# TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for frankenphp.
-GH_REPO="https://github.com/theutz/frankenphp"
+GH_REPO="https://github.com/dunglas/frankenphp"
 TOOL_NAME="frankenphp"
 TOOL_TEST="frankenphp php-cli -v"
 
@@ -14,7 +13,6 @@ fail() {
 
 curl_opts=(-fsSL)
 
-# NOTE: You might want to remove this if frankenphp is not hosted on GitHub releases.
 if [ -n "${GITHUB_API_TOKEN:-}" ]; then
 	curl_opts=("${curl_opts[@]}" -H "Authorization: token $GITHUB_API_TOKEN")
 fi
@@ -31,8 +29,6 @@ list_github_tags() {
 }
 
 list_all_versions() {
-	# TODO: Adapt this. By default we simply list the tag names from GitHub releases.
-	# Change this function if frankenphp has other means of determining installable versions.
 	list_github_tags
 }
 
