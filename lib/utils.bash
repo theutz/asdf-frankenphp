@@ -25,7 +25,7 @@ sort_versions() {
 list_github_tags() {
 	git ls-remote --tags --refs "$GH_REPO" |
 		grep -o 'refs/tags/.*' | cut -d/ -f3- |
-		sed 's/^v//' # NOTE: You might want to adapt this sed to remove non-version strings from tags
+		sed 's/^v//'
 }
 
 list_all_versions() {
@@ -63,7 +63,6 @@ install_version() {
 		mkdir -p "$install_path"
 		cp -r "$ASDF_DOWNLOAD_PATH/$TOOL_NAME" "$install_path"
 
-		# TODO: Assert frankenphp executable exists.
 		local tool_cmd
 		tool_cmd="$(echo "$TOOL_TEST" | cut -d' ' -f1)"
 		test -x "$install_path/$tool_cmd" || fail "Expected $install_path/$tool_cmd to be executable."
