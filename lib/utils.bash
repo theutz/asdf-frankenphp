@@ -11,7 +11,7 @@ fail() {
 	exit 1
 }
 
-curl_opts=(-fsSL)
+curl_opts=(-fsL)
 
 if [ -n "${GITHUB_API_TOKEN:-}" ]; then
 	curl_opts=("${curl_opts[@]}" -H "Authorization: token $GITHUB_API_TOKEN")
@@ -37,7 +37,6 @@ download_release() {
 	version="$1"
 	filename="$2"
 
-	# TODO: Adapt the release URL convention for frankenphp
 	if [[ $OSTYPE == 'darwin'* ]]; then
 		system="mac"
 		arch="$(uname -m)"
@@ -49,6 +48,8 @@ download_release() {
 
 	echo "* Downloading $TOOL_NAME release $version..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
+
+	chmod +x "$filename"
 }
 
 install_version() {
