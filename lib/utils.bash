@@ -62,7 +62,8 @@ install_version() {
 
 	(
 		mkdir -p "$install_path"
-		cp "$ASDF_DOWNLOAD_PATH/$TOOL_NAME" "$install_path"
+		printf "download path: %s\ntool name: %s\ninstall path: %s\n" "$ASDF_DOWNLOAD_PATH" "$TOOL_NAME" "$install_path"
+		cp -R "$ASDF_DOWNLOAD_PATH/$TOOL_NAME" "$install_path"
 
 		local tool_cmd
 		tool_cmd="$(echo "$TOOL_TEST" | cut -d' ' -f1)"
