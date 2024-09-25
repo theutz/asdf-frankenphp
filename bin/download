@@ -10,12 +10,10 @@ source "${plugin_dir}/lib/utils.bash"
 
 mkdir -p "$ASDF_DOWNLOAD_PATH"
 
-release_file="$ASDF_DOWNLOAD_PATH/$TOOL_NAME-$ASDF_INSTALL_VERSION"
+release_file="$ASDF_DOWNLOAD_PATH/$TOOL_NAME"
 
 # Download tar.gz file to the download directory
 download_release "$ASDF_INSTALL_VERSION" "$release_file"
-
-chmod +x "$release_file"
 
 # Remove the tar.gz file since we don't need to keep it
 rm "$release_file"
