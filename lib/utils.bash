@@ -46,7 +46,7 @@ download_release() {
 	fi
 	url="$GH_REPO/releases/download/v${version}/frankenphp-${system}-${arch}"
 
-	echo "* Downloading $TOOL_NAME release $version..."
+	echo "* Downloading $TOOL_NAME release $version for ${system}-${arch}..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
 	chmod +x "$filename"
 }
