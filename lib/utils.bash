@@ -48,6 +48,7 @@ download_release() {
 
 	echo "* Downloading $TOOL_NAME release $version..."
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
+	chmod +x "$install_path/$TOOL_NAME"
 }
 
 install_version() {
@@ -61,8 +62,7 @@ install_version() {
 
 	(
 		mkdir -p "$install_path"
-		cp -r "$ASDF_DOWNLOAD_PATH/$TOOL_NAME" "$install_path"
-		chmod +x "$install_path/$TOOL_NAME"
+		cp -r "$ASDF_DOWNLOAD_PATH/$TOOL_NAME/$version" "$install_path"
 
 		local tool_cmd
 		tool_cmd="$(echo "$TOOL_TEST" | cut -d' ' -f1)"
