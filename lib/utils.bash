@@ -11,7 +11,7 @@ fail() {
 	exit 1
 }
 
-curl_opts=(-fSL)
+curl_opts=(-fsSL)
 
 if [ -n "${GITHUB_API_TOKEN:-}" ]; then
 	curl_opts=("${curl_opts[@]}" -H "Authorization: token $GITHUB_API_TOKEN")
@@ -62,7 +62,6 @@ install_version() {
 
 	(
 		mkdir -p "$install_path"
-		printf "download path: %s\ntool name: %s\ninstall path: %s\n" "$ASDF_DOWNLOAD_PATH" "$TOOL_NAME" "$install_path"
 		cp -r "$ASDF_DOWNLOAD_PATH/$TOOL_NAME" "$install_path/$TOOL_NAME"
 
 		local tool_cmd
@@ -71,7 +70,7 @@ install_version() {
 
 		echo "$TOOL_NAME $version installation was successful!"
 	) || (
-		# rm -rf "$install_path"
+		rm -rf "$install_path"
 		fail "An error occurred while installing $TOOL_NAME $version."
 	)
 }
