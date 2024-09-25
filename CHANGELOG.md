@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/theutz/asdf-frankenphp/compare/v0.1.1...v0.2.0) (2024-09-25)
+
+
+### Features
+
+* add prefix ([#6](https://github.com/theutz/asdf-frankenphp/issues/6)) ([af2deb8](https://github.com/theutz/asdf-frankenphp/commit/af2deb8a578db5e184a375d65c4f33fc46cf7ca5))
+
 ## [0.1.1](https://github.com/theutz/asdf-frankenphp/compare/v0.1.0...v0.1.1) (2024-09-25)
 
 
