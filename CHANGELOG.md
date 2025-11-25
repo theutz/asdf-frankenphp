@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.0](https://github.com/theutz/asdf-frankenphp/compare/v0.1.1...v0.2.0) (2025-11-25)
+
+
+### Features
+
+* add prefix ([#6](https://github.com/theutz/asdf-frankenphp/issues/6)) ([af2deb8](https://github.com/theutz/asdf-frankenphp/commit/af2deb8a578db5e184a375d65c4f33fc46cf7ca5))
+
+
+### Bug Fixes
+
+* change URL for frankenphp releases ([#14](https://github.com/theutz/asdf-frankenphp/issues/14)) ([b3ef2a3](https://github.com/theutz/asdf-frankenphp/commit/b3ef2a3288d1b77f465fc9e2682b3ea4774b63c2))
+
 ## [0.1.1](https://github.com/theutz/asdf-frankenphp/compare/v0.1.0...v0.1.1) (2024-09-25)
 
 
