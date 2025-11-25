@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-GH_REPO="https://github.com/dunglas/frankenphp"
+GH_REPO="https://github.com/php/frankenphp"
 TOOL_NAME="frankenphp"
 TOOL_TEST="frankenphp php-cli -v"
 
