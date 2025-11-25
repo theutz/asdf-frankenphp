@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/theutz/asdf-frankenphp/compare/v0.2.0...v0.2.1) (2025-11-25)
+
+
+### Bug Fixes
+
+* uname -m for linux, too ([#15](https://github.com/theutz/asdf-frankenphp/issues/15)) ([85f4f64](https://github.com/theutz/asdf-frankenphp/commit/85f4f64554866ed609f751b7c33d413c142ddce4))
+
 ## [0.2.0](https://github.com/theutz/asdf-frankenphp/compare/v0.1.1...v0.2.0) (2025-11-25)
 
 
