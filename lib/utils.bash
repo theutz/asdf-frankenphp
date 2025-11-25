@@ -47,6 +47,9 @@ download_release() {
 	else
 		system="linux"
 		arch="$(uname -i)"
+		if [[ "$arch" == "unknown" ]]; then
+			arch="$(uname -m)"
+		fi
 	fi
 	url="$GH_REPO/releases/download/v${version}/frankenphp-${system}-${arch}"
 
