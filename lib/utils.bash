@@ -37,6 +37,10 @@ download_release() {
 	version="$1"
 	filename="$2"
 
+	if [[ "$version" == "latest" ]]; then
+		version="$(bin/latest-stable)"
+	fi
+
 	if [[ $OSTYPE == 'darwin'* ]]; then
 		system="mac"
 		arch="$(uname -m)"
