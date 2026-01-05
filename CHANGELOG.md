@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/theutz/asdf-frankenphp/compare/v0.2.1...v0.2.2) (2026-01-05)
+
+
+### Bug Fixes
+
+* update frankenphp repository link and refactor architecture detection ([#17](https://github.com/theutz/asdf-frankenphp/issues/17)) ([6d30b11](https://github.com/theutz/asdf-frankenphp/commit/6d30b11381520827f4e81c77e7b82e18e140987a))
+
 ## [0.2.1](https://github.com/theutz/asdf-frankenphp/compare/v0.2.0...v0.2.1) (2025-11-25)
 
 
