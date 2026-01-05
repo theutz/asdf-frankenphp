@@ -43,14 +43,10 @@ download_release() {
 
 	if [[ $OSTYPE == 'darwin'* ]]; then
 		system="mac"
-		arch="$(uname -m)"
 	else
 		system="linux"
-		arch="$(uname -i)"
-		if [[ "$arch" == "unknown" ]]; then
-			arch="$(uname -m)"
-		fi
 	fi
+	arch="$(uname -m)"
 	url="$GH_REPO/releases/download/v${version}/frankenphp-${system}-${arch}"
 
 	echo "* Downloading $TOOL_NAME release $version for ${system}-${arch}..."

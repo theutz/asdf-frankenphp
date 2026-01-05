@@ -2,7 +2,7 @@
 
 # asdf-frankenphp [![Build](https://github.com/theutz/asdf-frankenphp/actions/workflows/build.yml/badge.svg)](https://github.com/theutz/asdf-frankenphp/actions/workflows/build.yml) [![Lint](https://github.com/theutz/asdf-frankenphp/actions/workflows/lint.yml/badge.svg)](https://github.com/theutz/asdf-frankenphp/actions/workflows/lint.yml)
 
-[frankenphp](https://github.com/theutz/frankenphp) plugin for the [asdf version manager](https://asdf-vm.com).
+[frankenphp](https://github.com/php/frankenphp) plugin for the [asdf version manager](https://asdf-vm.com).
 
 </div>
 
